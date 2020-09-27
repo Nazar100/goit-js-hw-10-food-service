@@ -4,9 +4,17 @@ const Theme = {
 };
 const btnRef = document.querySelector('#theme-switch-toggle');
 const bodyRef = document.querySelector('body');
-const images = document.querySelectorAll('img[loading="lazy');
+const itemsRef = document.querySelectorAll('.menu__item');
+const imagesRef = document.querySelector('img[loading="lazy"]');
 
 btnRef.addEventListener('click', changeThemeClr);
+imagesRef.addEventListener('load', appearItems);
+
+function appearItems() {
+  itemsRef.forEach(item => {
+    item.classList.add('appear');
+  });
+}
 
 console.log(localStorage);
 

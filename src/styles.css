@@ -225,3 +225,12 @@ body.dark-theme {
 .button__icon {
   margin-right: 8px;
 }
+.menu__item {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 500ms linear 500ms;
+}
+.menu__item.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
