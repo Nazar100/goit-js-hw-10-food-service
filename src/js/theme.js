@@ -7,12 +7,14 @@ const bodyRef = document.querySelector('body');
 
 btnRef.addEventListener('click', changeThemeClr);
 
+console.log(localStorage);
+
 function setDefaultTheme() {
-  if (localStorage.Theme === JSON.stringify(Theme.LIGHT)) {
+  if (localStorage.Theme !== JSON.stringify(Theme.DARK)) {
     setLightTheme();
     setLocalStorageLight();
     btnRef.checked = false;
-  } else if (localStorage.Theme === JSON.stringify(Theme.DARK)) {
+  } else {
     setDarkTheme();
     setLocalStorageDark();
     btnRef.checked = true;
