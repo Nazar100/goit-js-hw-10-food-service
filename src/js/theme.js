@@ -8,7 +8,7 @@ const itemsRef = document.querySelectorAll('.menu__item');
 const imagesRef = document.querySelector('img[loading="lazy"]');
 
 btnRef.addEventListener('change', changeThemeClr);
-imagesRef.addEventListener('load', appearItems);
+imagesRef.addEventListener('load', appearItems, { once: true });
 
 function appearItems() {
   itemsRef.forEach(item => {
