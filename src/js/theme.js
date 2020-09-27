@@ -4,6 +4,7 @@ const Theme = {
 };
 const btnRef = document.querySelector('#theme-switch-toggle');
 const bodyRef = document.querySelector('body');
+const images = document.querySelectorAll('img[loading="lazy');
 
 btnRef.addEventListener('click', changeThemeClr);
 
