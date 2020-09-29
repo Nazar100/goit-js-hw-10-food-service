@@ -234,3 +234,51 @@ body.dark-theme {
   transform: translateX(0);
   opacity: 1;
 }
+
+.scroll-up {
+  position: fixed;
+  right: 85px;
+  bottom: 85px;
+  z-index: 1000;
+  width: 25px;
+  height: 25px;
+  color: #d3d3d4;
+  cursor: pointer;
+  visibility: hidden;
+
+  opacity: 0;
+  transition: 0.2s;
+  transform: translateY(25px);
+}
+
+.scroll-up::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  content: '↑';
+  transform: translate(38px, 35px);
+  /* transform: translateX(20px); */
+}
+.scroll-up:hover {
+  color: orange;
+}
+
+.scroll-up--active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-up__svg {
+  fill: none;
+  box-sizing: border-box;
+  stroke: orange;
+  stroke-width: 4px;
+  transition: 0.2s;
+}
